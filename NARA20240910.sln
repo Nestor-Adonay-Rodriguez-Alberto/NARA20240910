@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NARA20240910", "NARA2024091
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NARA20240910.DTOs", "NARA20240910.DTOs\NARA20240910.DTOs.csproj", "{2C3DA84C-6CA1-452D-BD42-4AB40374BB50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_MVC", "UI_MVC\UI_MVC.csproj", "{B837C018-CE4A-4027-88C3-6BDBC37EB004}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2C3DA84C-6CA1-452D-BD42-4AB40374BB50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C3DA84C-6CA1-452D-BD42-4AB40374BB50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C3DA84C-6CA1-452D-BD42-4AB40374BB50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B837C018-CE4A-4027-88C3-6BDBC37EB004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B837C018-CE4A-4027-88C3-6BDBC37EB004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B837C018-CE4A-4027-88C3-6BDBC37EB004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B837C018-CE4A-4027-88C3-6BDBC37EB004}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
