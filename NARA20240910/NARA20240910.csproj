@@ -11,4 +11,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NARA20240910.DTOs\NARA20240910.DTOs.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -6,15 +6,15 @@ namespace NARA20240910.DTOs.ProductDTOs
     {
         // ATRIBUTOS:
         public int CountRow { get; set; }
-        public List<ProductNARA> Data { get; set; }
+        public List<ProductNARADTO> Data { get; set; }
 
         // CLASE:
-        public class ProductNARA
+        public class ProductNARADTO
         {
             public int Id { get; set; }
 
             [Display(Name = "NombreNARA")]
-            public string Name { get; set; }
+            public string NombreNARA { get; set; }
 
 
             [Display(Name = "DescripcionNARA")]
@@ -22,7 +22,7 @@ namespace NARA20240910.DTOs.ProductDTOs
 
 
             [Display(Name = "Precio")]
-            public string Precio { get; set; }
+            public double Precio { get; set; }
         }
 
     }
