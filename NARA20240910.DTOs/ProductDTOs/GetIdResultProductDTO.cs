@@ -14,6 +14,6 @@ namespace NARA20240910.DTOs.ProductDTOs
         public string? DescripcionNARA { get; set; }
 
         [Display(Name = "Precio")]
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
     }
 }

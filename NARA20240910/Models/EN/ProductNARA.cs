@@ -6,6 +6,6 @@
         public int Id { get; set; }
         public string NombreNARA { get; set; }
         public string DescripcionNARA { get; set; }
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
     }
 }

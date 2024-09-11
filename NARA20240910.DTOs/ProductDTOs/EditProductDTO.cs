@@ -40,6 +40,6 @@ namespace NARA20240910.DTOs.ProductDTOs
 
         [Display(Name = "Precio")]
         [Required(ErrorMessage = "El campo Precio es obligatorio.")]
-        public double Precio { get; set; }
+        public decimal Precio { get; set; }
     }
 }

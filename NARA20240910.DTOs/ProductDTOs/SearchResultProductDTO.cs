@@ -22,7 +22,7 @@ namespace NARA20240910.DTOs.ProductDTOs
 
 
             [Display(Name = "Precio")]
-            public double Precio { get; set; }
+            public decimal Precio { get; set; }
         }
 
     }

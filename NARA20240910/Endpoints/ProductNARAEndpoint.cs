@@ -109,7 +109,7 @@ namespace NARA20240910.Endpoints
 
             // MODIFICAR:
             // Configurar un endpoint de tipo PUT para editar un cliente existente
-            app.MapPut("/customer", async (EditProductDTO editProductDTO, ProductNARADAL productNARADAL) =>
+            app.MapPut("/ProductNARA", async (EditProductDTO editProductDTO, ProductNARADAL productNARADAL) =>
             {
                 // Crear un objeto 'ProductoNARA' a partir de los datos proporcionados
                 var Objeto_Producto = new ProductNARA
@@ -131,7 +131,7 @@ namespace NARA20240910.Endpoints
 
             // ELIMINAR:
             // Configurar un endpoint de tipo DELETE para eliminar un cliente por ID
-            app.MapDelete("/customer/{id}", async (int id, ProductNARADAL productNARADAL) =>
+            app.MapDelete("/ProductNARA/{id}", async (int id, ProductNARADAL productNARADAL) =>
             {
                 // Intentar eliminar el cliente y devolver el resultado correspondiente
                 int result = await productNARADAL.Delete(id);
