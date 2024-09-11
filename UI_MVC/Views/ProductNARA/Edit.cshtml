@@ -1,0 +1,50 @@
+﻿@model NARA20240910.DTOs.ProductDTOs.EditProductDTO
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Producto</h4>
+<hr />
+<form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input asp-for="Id" type="hidden" />
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="NombreNARA" class="control-label"></label>
+                <input asp-for="NombreNARA" class="form-control" />
+                <span asp-validation-for="NombreNARA" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="DescripcionNARA" class="control-label"></label>
+                <input asp-for="DescripcionNARA" class="form-control" />
+                <span asp-validation-for="DescripcionNARA" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label asp-for="Precio" class="control-label"></label>
+                <input asp-for="Precio" class="form-control"></input>
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row-cols-6">
+        <div class="form-group">
+            <input type="submit" value="Modificar" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

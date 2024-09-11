@@ -1,0 +1,43 @@
+﻿@model NARA20240910.DTOs.ProductDTOs.GetIdResultProductDTO
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<form asp-action="Details">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input asp-for="Id" type="hidden" />
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="NombreNARA" class="control-label"></label>
+                <input asp-for="NombreNARA" disabled class="form-control" />
+                <span asp-validation-for="NombreNARA" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="DescripcionNARA" class="control-label"></label>
+                <input asp-for="DescripcionNARA" disabled class="form-control" />
+                <span asp-validation-for="DescripcionNARA" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label asp-for="Precio" class="control-label"></label>
+                <input asp-for="Precio" disabled class="form-control"></input>
+                <span asp-validation-for="Precio" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row-cols-6">
+        <div class="form-group">
+            <a asp-action="Index" class="btn btn-secondary">Ir ver clientes</a>
+        </div>
+    </div>
+</form>
