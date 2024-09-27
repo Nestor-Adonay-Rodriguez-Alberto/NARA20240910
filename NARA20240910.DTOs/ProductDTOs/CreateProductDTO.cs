@@ -9,7 +9,6 @@ namespace NARA20240910.DTOs.ProductDTOs
 {
     public class CreateProductDTO
     {
-        [Display(Name = "NombreNARA")]
         [Required(ErrorMessage = "El campo Nombre es obligatorio.")]
         [MaxLength(50, ErrorMessage = "El campo Nombre no puede tener más de 50 caracteres.")]
         public string NombreNARA { get; set; }

@@ -1,0 +1,87 @@
+﻿@page "/productNara-list"
+@using NARA20240910.DTOs.ProductDTOs
+@using System.Text.Json;
+@using Microsoft.AspNetCore.Components;
+@using Microsoft.AspNetCore.Components.Forms;
+@using UI_Blazor.Data
+
+
+<NavLink href="/create-productNara" class="btn btn-dark">Crear Nuevo</NavLink>
+<h3>Lista de Clientes</h3>
+@if (searchResult != null && searchResult.Data != null && searchResult.Data.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in searchResult.Data)
+            {
+                <tr>
+                    <td>@customer.NombreNARA</td>
+                    <td>@customer.DescripcionNARA</td>
+                    <td>@customer.Precio</td>
+                    <td>
+                        <button class="btn btn-dark" @onclick="() => GoEdit(customer.Id)">Editar</button>
+                        <button class="btn btn-info" @onclick="() => GoDetails(customer.Id)">Ver</button>
+                        <button class="btn btn-danger" @onclick="() => GoDelete(customer.Id)">Eliminar</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    // Inyección de dependencias de CustomerService y NavigationManager
+    [Inject]
+    ProductNARAService productNARAService { get; set; }
+    [Inject]
+    NavigationManager navigation { get; set; }
+
+    // Declaración e inicialización de objetos y variables
+    SearchResultProductDTO searchResult = new SearchResultProductDTO();
+    SearchQueryProductDTO prueba = new SearchQueryProductDTO();
+    int skipAnte = 0;
+    int skipSi = 0;
+
+
+    // Método que se llama cuando se inicializa el componente
+    /*
+    *  se utiliza para realizar inicializaciones o tareas
+    *  cuando se carga una página o componente de Blazor.
+    * Este método se llama automáticamente cuando el componente se está inicializando
+    *  antes de que se muestre en la interfaz de usuario.
+    */
+    protected override async Task OnInitializedAsync()
+    {
+        searchResult = await productNARAService.Search(prueba);
+    }
+
+    // Método para realizar una búsqueda después de una acción de búsqueda
+    private async Task SubmitSearch()
+    {
+    }
+
+
+    // Métodos para navegar a las páginas de edición, detalles y eliminación
+    private void GoEdit(int customerId)
+    {
+        navigation.NavigateTo($"/edit-productNara/{customerId}");
+    }
+
+    private void GoDetails(int customerId)
+    {
+        navigation.NavigateTo($"/productNara-details/{customerId}");
+    }
+
+    private void GoDelete(int customerId)
+    {
+        navigation.NavigateTo($"/delete-customer/{customerId}");
+    }
+
+
+}
